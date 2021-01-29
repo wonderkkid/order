@@ -27,17 +27,16 @@ public class Order {
     @PreRemove
     public void onPreRemove(){
         OrderCancelled orderCancelled = new OrderCancelled();
-        BeanUtils.copyProperties(this, orderCancelled);
-        orderCancelled.publishAfterCommit();
+        //BeanUtils.copyProperties(this, orderCancelled);
+        //orderCancelled.publishAfterCommit();
 
         //Following code causes dependency to external APIs
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
-
+/*
         .external.Cancellation cancellation = new .external.Cancellation();
         // mappings goes here
-        Application.applicationContext.getBean(.external.CancellationService.class)
-            .cancel(cancellation);
-
+        Application.applicationContext.getBean(.external.CancellationService.class).cancel(cancellation);
+*/
 
     }
 

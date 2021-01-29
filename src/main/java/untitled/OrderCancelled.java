@@ -1,4 +1,4 @@
-package UNTITLED;
+package untitled;
 
 public class OrderCancelled extends AbstractEvent {
 
