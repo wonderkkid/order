@@ -38,6 +38,7 @@ public class Order {
         Application.applicationContext.getBean(.external.CancellationService.class).cancel(cancellation);
 */
         // trigger test
+        System.out.println("trigger test");
 
     }
 
